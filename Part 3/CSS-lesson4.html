@@ -1,0 +1,239 @@
+<!--Create a Graphic Using CSS-->
+<style>
+    .center {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: 25px 10px 0px 0px blue;
+    }
+  
+  </style>
+  <div class="center"></div>
+  
+  <!--Create a More Complex Shape Using CSS and HTML-->
+  <style>
+    .heart {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: pink;
+      height: 50px;
+      width: 50px;
+      transform: rotate(-45deg);
+    }
+    .heart::after {
+      background-color: pink;
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 0px;
+      left: 25px;
+    }
+    .heart::before {
+      content: "";
+      background-color: pink;
+      border-radius: 50%;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0px;
+    }
+  </style>
+  <div class="heart"></div>
+  
+  <!--Learn How the CSS @keyframes and animation Properties Work-->
+  <style>
+    div {
+      height: 40px;
+      width: 70%;
+      background: black;
+      margin: 50px auto;
+      border-radius: 5px;
+    }
+  
+    #rect {
+    animation-name: rainbow;
+    animation-duration: 4s;
+  }
+  
+  @keyframes rainbow {
+    0% {
+      background-color: blue;
+    }
+    50% {
+      background-color: green;
+    }
+    100% {
+      background-color: yellow;
+      }
+  }
+  
+  </style>
+  <div id="rect"></div>
+  
+  <!--Use CSS Animation to Change the Hover State of a Button-->
+  <style>
+    button {
+      border-radius: 5px;
+      color: white;
+      background-color: #0F5897;
+      padding: 5px 10px 8px 10px;
+    }
+  
+    button:hover {
+      animation-name: background-color;
+      animation-duration: 500ms;
+    }
+  
+    @keyframes background-color {
+      100% {
+        background-color: #4791d0;
+      }
+    }
+  
+  </style>
+  
+  <button>Register</button>
+  
+  <!--Modify Fill Mode of an Animation-->
+  <style>
+    button {
+      border-radius: 5px;
+      color: white;
+      background-color: #0F5897;
+      padding: 5px 10px 8px 10px;
+    }
+    button:hover {
+      animation-name: background-color;
+      animation-duration: 500ms;
+      /* Only change code below this line */
+      animation-fill-mode: forwards;
+      /* Only change code above this line */
+    }
+    @keyframes background-color {
+      100% {
+        background-color: #4791d0;
+      }
+    }
+  </style>
+  <button>Register</button>
+  
+  <!--Create Movement Using CSS Animation-->
+  <style>
+    div {
+      height: 40px;
+      width: 70%;
+      background: black;
+      margin: 50px auto;
+      border-radius: 5px;
+      position: relative;
+    }
+  
+    #rect {
+      animation-name: rainbow;
+      animation-duration: 4s;
+    }
+  
+    @keyframes rainbow {
+      0% {
+        background-color: blue;
+        top: 0px;
+        left: 0px;
+  
+      }
+      50% {
+        background-color: green;
+        top: 25px;
+        left: 25px;
+  
+      }
+      100% {
+        background-color: yellow;
+        top: -25px;
+        left: -25px;
+  
+      }
+    }
+  </style>
+  
+  <div id="rect"></div>
+  
+  <!--Create Visual Direction by Fading an Element from Left to Right-->
+  <style>
+  
+    #ball {
+      width: 70px;
+      height: 70px;
+      margin: 50px auto;
+      position: fixed;
+      left: 20%;
+      border-radius: 50%;
+      background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+      );
+      animation-name: fade;
+      animation-duration: 3s;
+    }
+  
+    @keyframes fade {
+      50% {
+        left: 60%;
+        opacity: 0.1;
+  
+      }
+    }
+  
+  </style>
+  
+  <div id="ball"></div>
+  
+  <!--Animate Elements Continually Using an Infinite Animation Count-->
+  <style>
+  
+    #ball {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      position: relative;
+      border-radius: 50%;
+      background: linear-gradient(
+        35deg,
+        #ccffff,
+        #ffcccc
+      );
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+    }
+  
+    @keyframes bounce{
+      0% {
+        top: 0px;
+      }
+      50% {
+        top: 249px;
+        width: 130px;
+        height: 70px;
+      }
+      100% {
+        top: 0px;
+      }
+    }
+  </style>
+  <div id="ball"></div>
+  
